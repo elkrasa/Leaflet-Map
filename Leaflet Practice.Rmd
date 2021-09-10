@@ -1,0 +1,28 @@
+---
+title: "Leaflet Practice"
+author: "elkrasa"
+date: "9/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## My First Map
+```{r include=FALSE}
+library(leaflet)
+my_map<-leaflet()%>%
+    addTiles()
+my_map
+```
+##Adding Markers
+```{r,echo=TRUE}
+library(leaflet)
+my_map<-my_map %>%
+    addMarkers(lat=40.849000, lng=-73.933300,
+               popup="Russian Hostel")%>%
+addMarkers(lat=40.834620, lng=-73.945070,
+               popup="Gym")
+my_map
+```
+
